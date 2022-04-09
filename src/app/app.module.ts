@@ -11,6 +11,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { LineComponent } from './line/line.component';
 import { InfoComponent } from './info/info.component';
 import { FormCardComponent } from './form-card/form-card.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormCardComponent } from './form-card/form-card.component';
     QuotesComponent,
     LineComponent,
     InfoComponent,
-    FormCardComponent
+    FormCardComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
