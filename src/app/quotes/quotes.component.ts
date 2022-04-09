@@ -13,10 +13,12 @@ export class QuotesComponent implements OnInit {
   ngOnInit(): void {
   }
   quotes: Quotes []= [
-    new Quotes ("First Quote" ,6, 0),
-    new Quotes ("second Quote" ,4, 0),
-    new Quotes ("third Quote" ,1, 0)
-  ]
+    new Quotes ("The way to get started is to quit talking and begin doing. " ,6, 0),
+    new Quotes ("Your time is limited, so don't waste it living someone else's life" ,0, 0),
+    new Quotes ("If life were predictable it would cease to be life, and be without flavor" ,0, 0)
+  ];
+ 
+
 
   arr: number[] = this.quotes.map(quote=>quote.upvote)
   highest = Math.max(...this.arr)
