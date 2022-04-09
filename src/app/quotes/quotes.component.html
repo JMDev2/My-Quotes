@@ -1,5 +1,16 @@
 <div class="quotes" *ngFor = 'let quote of quotes'>
-    <p>{{quote.quote}}</p>
+    <div *ngIf="quote.upvote == highest; then highlight
+    else empty"></div>
+    <ng-template #highlight>
+        <p appHighlight>{{quote.quote}} <button>Upvote</button>{{quote.upvote}} </p>
+       <p><button>Downvotes</button>{{quote.downvote}} </p>
+    </ng-template>
+    <ng-template #empty>
+        <p appHighlight>{{quote.quote}} <button>Upvote</button>{{quote.upvote}} </p>
+        <p><button>Downvotes</button>{{quote.downvote}} </p>
+    </ng-template>
+
+    <!-- <p>{{quote.quote}}</p>
     <p><button>Upvote</button>{{quote.upvote}}</p>
-    <p><button>Downvote</button>{{quote.downvote}}</p>      
+    <p><button>Downvote</button>{{quote.downvote}}</p>       -->
 </div>
