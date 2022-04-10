@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -8,16 +8,23 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
+  toggleDetails(index: number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription; 
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
   quotes: Quotes []= [
-    new Quotes ("The way to get started is to quit talking and begin doing. " ,6, 0),
-    new Quotes ("Your time is limited, so don't waste it living someone else's life" ,0, 0),
-    new Quotes ("If life were predictable it would cease to be life, and be without flavor" ,0, 0)
+    new Quotes ("The way to get started is to quit talking and begin doing. " ,6, 0, "author", "name", new Date(2020,3,1)),
+    new Quotes ("Your time is limited, so don't waste it living someone else's life" ,0, 0, "author", "name", new Date(2020,3,1)),
+    new Quotes ("If life were predictable it would cease to be life, and be without flavor" ,0, 0,"author", "name", new Date(2020,3,1))
   ];
  
+  addNewQuote(quote){
+    this.quotes.push(quote)
+    console.log(quote)
+  }
 
 
   arr: number[] = this.quotes.map(quote=>quote.upvote)

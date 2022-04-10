@@ -1,1 +1,31 @@
-<p>form worksdfiu;tjhoguilwoty[qeapt9fgrfghsragesu6sresrreatysrywefdwASUYJ!</p>
+<div class="container-fluid">
+    <h2 class="text-center">Create a new Quote</h2>
+    <hr>
+    <form #form="ngForm" (ngSubmit)="submitQuote(form)">
+        <div class="form-group">
+  
+            <label for="author">Author</label>
+            <input type="text" required class="form-control" id="author" name="author"
+            author="ngModel" ngModel>
+  
+        </div>
+        <div class="form-group">
+            
+            <label for="quote">Quote</label>
+            <input type="text" required class="form-control" id="quote" name="quote"
+            quote="ngModel" ngModel>
+            
+    
+        </div>
+        <div class="form-group">
+
+            <label for="name">Name</label>
+            <input type="text" required class="form-control" id="name" name="name"
+            #name="ngModel" ngModel>
+            
+  
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>

@@ -2,10 +2,12 @@
     border: 1px solid #FF758F;
     box-sizing: border-box;
     border-radius: 3px;
-    height: 50px;
-    width: 90vh; 
+    height: auto;
+    width: auto; 
     display: flex;
+    flex-direction: column;
     justify-content:space-around ;
-    align-items: center; 
+    /* align-items: center;  */
     padding: 40px;
+    gap: 10px;
 }
