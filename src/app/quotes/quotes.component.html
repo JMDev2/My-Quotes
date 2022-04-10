@@ -17,21 +17,16 @@
         
                     <button type="button" id="btn" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
                     <p *ngIf='quote.showDescription'>
-                        {{quote.author}}
-                        {{quote.name}}
-                        {{quote.date | pipe}}
-                    </p>
-                    <p>This was posted on {{quote.date | date}}</p>
-                    <p>{{quote.upvote}}</p>
-                    <p><button type="button" class="btn btn-primary" (click)="quote.increaseVotes()">Upvote</button></p>
-                    <p>{{quote.downvote}}</p>
-                   <p><button type="button" class="btn btn-primary" (click)="quote.decreaseVotes()">Downvotes</button></p>
-                <!-- </ng-template> -->
+                        This Quote was posted by:<b>{{quote.author}}</b> ,
         
-                <!-- <ng-template #empty>
-                    <p><button type="button" class="btn btn-primary">Upvote</button>{{quote.upvote}} </p>
-                    <p><button type="button" class="btn btn-primary">Downvotes</button>{{quote.downvote}} </p>
-                </ng-template> -->
+                        on <em>{{quote.date | date}}</em>. The Total upvotes is <b>{{quote.upvote}}</b> and the Total downvotes is <b>{{quote.downvote}}</b>.
+                    </p>
+                   
+                    
+                    <p><button type="button" class="btn btn-primary bg-white" (click)="quote.increaseVotes()"><i class="fa-solid fa-thumbs-up">{{quote.upvote}}</i></button></p>
+                    
+                   <p><button type="button" class="btn btn-danger bg-white" (click)="quote.decreaseVotes()"><i class="fa-solid fa-thumbs-down">{{quote.downvote}}</i></button></p>
+                
             
             
         </div>
