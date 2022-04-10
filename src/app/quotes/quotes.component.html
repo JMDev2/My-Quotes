@@ -3,17 +3,9 @@
 <div class="card">
     <div class="card-body">
         <div class="quotes" *ngFor = 'let quote of quotes; let i=index'>
-            <!-- <p>{{quote.quote}} {{quote.author}} {{quote.name}}</p> -->
+            
             <p appHighlight>{{quote.quote}}</p> 
-            <!-- <div *ngIf="quote.upvote == highest && quote.upvote>0; then highlight
-            else empty"></div> -->
-        
-        
-         
-            <!-- <li appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li>  -->
-        
-                <!-- <ng-template #highlight > -->
-                    <!-- <p appHighlight>{{quote.quote}}</p> -->
+            
         
                     <button type="button" id="btn" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
                     <p *ngIf='quote.showDescription'>
@@ -22,11 +14,20 @@
                         on <em>{{quote.date | date}}</em>. The Total upvotes is <b>{{quote.upvote}}</b> and the Total downvotes is <b>{{quote.downvote}}</b>.
                     </p>
                    
+                    <!-- <p>{{quote.description}}</p>
+<p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
+<button (click)= 'goalDelete(true)'>Delete Goal</button>
+
+*ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'deleteGoal($event,i)'> -->
+
                     
+                  <div class="myButtons">
                     <p><button type="button" class="btn btn-primary bg-white" (click)="quote.increaseVotes()"><i class="fa-solid fa-thumbs-up">{{quote.upvote}}</i></button></p>
                     
-                   <p><button type="button" class="btn btn-danger bg-white" (click)="quote.decreaseVotes()"><i class="fa-solid fa-thumbs-down">{{quote.downvote}}</i></button></p>
-                
+                    <p><button type="button" class="btn btn-danger bg-white" (click)="quote.decreaseVotes()"><i class="fa-solid fa-thumbs-down">{{quote.downvote}}</i></button></p>
+                 
+                  </div>
+
             
             
         </div>

@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     justify-content:space-around ;
-    /* align-items: center;  */
     padding: 40px;
     gap: 10px;
 }
@@ -31,4 +30,11 @@
 }
 .btn{
     color: black;
+}
+.myButtons{
+    display: flex;
+    gap: 44px;
+}
+.card-body{
+    padding: 20px;
 }
