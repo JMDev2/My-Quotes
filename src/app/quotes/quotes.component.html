@@ -2,9 +2,10 @@
 
 <div class="card">
     <div class="card-body">
+        <h2 class="text-center">Display the Quotes</h2>
         <div class="quotes" *ngFor = 'let quote of quotes; let i=index'>
             
-            <p appHighlight>{{quote.quote}}</p> 
+            <p>{{quote.quote}}</p> 
             
         
                     <button type="button" id="btn" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
