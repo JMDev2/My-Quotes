@@ -22,9 +22,10 @@
                         {{quote.date | pipe}}
                     </p>
         
-                    
-                    <p><button type="button" class="btn btn-primary" (click)="upVotes(i)">Upvote</button>{{quote.upvote}} </p>
-                   <p><button type="button" class="btn btn-primary" (click)="downVotes(i)">Downvotes</button>{{quote.downvote}} </p>
+                    <p>{{quote.upvote}}</p>
+                    <p><button type="button" class="btn btn-primary" (click)="quote.increaseVotes()">Upvote</button></p>
+                    <p>{{quote.downvote}}</p>
+                   <p><button type="button" class="btn btn-primary" (click)="quote.decreaseVotes()">Downvotes</button></p>
                 <!-- </ng-template> -->
         
                 <!-- <ng-template #empty>

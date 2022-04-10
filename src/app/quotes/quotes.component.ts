@@ -23,20 +23,24 @@ export class QuotesComponent implements OnInit {
   ];
  
   addNewQuote(quote){
-    this.quotes.push(quote)
-    console.log(quote)
+    let quotez = quote.quote
+    let author = quote.author
+    let name = quote.name
+    this.quotes.push(new Quotes(quotez, 0, 0,author, name, new Date));
+
+  
   }
-
-
-  arr: number[] = this.quotes.map(quote=>quote.upvote)
-  highest = Math.max(...this.arr)
-    
-  upVotes(i){
-    this.quotes[i].upvote++ 
-  }
-  downVotes(i){
-    this.quotes[i].upvote--
-  }
-
-
 }
+
+  // arr: number[] = this.quotes.map(quote=>quote.upvote)
+  // highest = Math.max(...this.arr)
+    
+  // upVotes(i){
+  //   this.quotes[i].upvote++ 
+  // }
+  // downVotes(j){
+  //   this.quotes[j].upvote--
+  // }
+
+
+
