@@ -14,6 +14,7 @@ export class Quotes {
         this.showDescription = false;
         this.author = author;
         this.name = name;
+        this.date = date;
         
       
       

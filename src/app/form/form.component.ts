@@ -30,6 +30,7 @@ export class FormComponent implements OnInit {
 
     submitQuote(form){
       console.log(form.value)
+      form.value.upvote = 0
       this.addQuote.emit(form.value)
       
     }

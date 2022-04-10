@@ -1,27 +1,40 @@
 <app-form (addQuote)="addNewQuote($event)"></app-form>
 
-
-<div class="quotes" *ngFor = 'let quote of quotes; let i=index'>
-    <!-- <p>{{quote.quote}} {{quote.author}} {{quote.name}}</p> -->
-    <p appHighlight>{{quote.quote}}</p> 
-    <div *ngIf="quote.upvote == highest && quote.upvote>0; then highlight
-    else empty"></div>
-
-        <ng-template #highlight >
-            <!-- <p appHighlight>{{quote.quote}}</p> -->
-
-            <!-- <button (click)='toggleDetails'>Toggle Details</button>
-            <p *ngIf='quote.showDescription' [quote]='quote'></p> -->
-
+<div class="card">
+    <div class="card-body">
+        <div class="quotes" *ngFor = 'let quote of quotes; let i=index'>
+            <!-- <p>{{quote.quote}} {{quote.author}} {{quote.name}}</p> -->
+            <p appHighlight>{{quote.quote}}</p> 
+            <!-- <div *ngIf="quote.upvote == highest && quote.upvote>0; then highlight
+            else empty"></div> -->
+        
+        
+         
+            <!-- <li appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li>  -->
+        
+                <!-- <ng-template #highlight > -->
+                    <!-- <p appHighlight>{{quote.quote}}</p> -->
+        
+                    <button type="button" id="btn" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
+                    <p *ngIf='quote.showDescription'>
+                        {{quote.author}}
+                        {{quote.name}}
+                        {{quote.date | pipe}}
+                    </p>
+        
+                    
+                    <p><button type="button" class="btn btn-primary" (click)="upVotes(i)">Upvote</button>{{quote.upvote}} </p>
+                   <p><button type="button" class="btn btn-primary" (click)="downVotes(i)">Downvotes</button>{{quote.downvote}} </p>
+                <!-- </ng-template> -->
+        
+                <!-- <ng-template #empty>
+                    <p><button type="button" class="btn btn-primary">Upvote</button>{{quote.upvote}} </p>
+                    <p><button type="button" class="btn btn-primary">Downvotes</button>{{quote.downvote}} </p>
+                </ng-template> -->
             
-            <p><button type="button" class="btn btn-primary">Upvote</button>{{quote.upvote}} </p>
-           <p><button type="button" class="btn btn-primary">Downvotes</button>{{quote.downvote}} </p>
-        </ng-template>
-        <ng-template #empty>
-            <!-- <p appHighlight>{{quote.quote}}</p>  -->
-            <p><button type="button" class="btn btn-primary">Upvote</button>{{quote.upvote}} </p>
-            <p><button type="button" class="btn btn-primary">Downvotes</button>{{quote.downvote}} </p>
-        </ng-template>
-    
-    
-</div>
+            
+        </div>
+    </div>
+  </div>
+
+
