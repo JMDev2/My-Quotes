@@ -21,7 +21,7 @@
                         {{quote.name}}
                         {{quote.date | pipe}}
                     </p>
-        
+                    <p>This was posted on {{quote.date | date}}</p>
                     <p>{{quote.upvote}}</p>
                     <p><button type="button" class="btn btn-primary" (click)="quote.increaseVotes()">Upvote</button></p>
                     <p>{{quote.downvote}}</p>

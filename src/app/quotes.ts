@@ -7,7 +7,7 @@ export class Quotes {
     public name: string;
     public date: Date;
     
-    constructor(quote:string, upvote:number=0, downvote:number=0, author: string, name: string, date: Date){
+    constructor(quote:string, upvote:number=0, downvote:number=0, author: string, name: string, date: Date = new Date()){
         
         this.quote =  quote;
         this.upvote = upvote || 0
