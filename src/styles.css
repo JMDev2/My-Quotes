@@ -2,6 +2,14 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
+body{
+     background-image: url("https://s7d2.scene7.com/is/image/TWCNews/Getty_Vote_Ballot_Election");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
 *{
     box-sizing: border-box;
     /* background-color: #C4C4C4; */
