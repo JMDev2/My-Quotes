@@ -11,6 +11,8 @@
     align-items: center; */
     padding: 30px 12px;
     gap: 10px;
+    background-color: transparent;
+   
 }
 .btn{
     margin-top: 20px;
