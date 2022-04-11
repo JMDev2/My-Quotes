@@ -29,3 +29,9 @@ border-radius: 4px;
 .btn:hover{
     background-color: green;
   }
+  input[type=text]{
+    background-color: transparent;
+  }
+  textarea[type=text]{
+    background-color: transparent;
+  }

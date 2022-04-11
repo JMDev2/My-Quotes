@@ -38,6 +38,14 @@
 .card-body{
     padding: 20px;
 }
+#btn1{
+    background-color: transparent;
+    width: 140px;
+}
 #btn{
     background-color: transparent;
+    
+}
+#btn:hover{
+    background-color: red;
 }
