@@ -1,5 +1,6 @@
 # Quotes
 My Quotes Projects: https://github.com/JOSEPHMAINA1995/My-Quotes.git
+
 # Author
 Mwangi Joseph Maina
 
@@ -13,6 +14,14 @@ You can install it with the following command in your terminal
 `Install Node.js`
 `npm package manager`
 Install the Angular CLI - `npm install -g @angular/cli`
+
+## BDD
+Create a quote
+Like a quote
+Dislike a quote
+Delete own's quote
+See all published quotes
+See all own's published quotes
 
 
 ## Development server
