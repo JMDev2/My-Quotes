@@ -45,7 +45,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 1.Typescript
 
 ### Live Site
-View [Live] 
+View [Live] https://josephmaina1995.github.io/My-Quotes/
 
 ### Licence
 This project is under the  [MIT](license) license

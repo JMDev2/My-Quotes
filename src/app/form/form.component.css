@@ -7,8 +7,6 @@
     border-radius: 8px;
     box-shadow: 8px 32px 40px rgba(255, 177, 143, 0.2);
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     padding: 30px 12px;
     gap: 10px;
     background-color: transparent;
@@ -17,14 +15,12 @@
 .btn{
 margin-top: 20px;
 border-radius: 4px;
-  
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+border: none;
+color: #FFFFFF;
+text-align: center;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
 }
 .btn:hover{
     background-color: green;

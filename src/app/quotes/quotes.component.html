@@ -6,33 +6,24 @@
         <div class="quotes" *ngFor = 'let quote of quotes; let i=index'>
             
             <p>{{quote.quote}}</p> 
-            
-        
                     <button type="button" id="btn1" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
                     <p *ngIf='quote.showDescription'>
 
-                     
-
-                      bu
-                        This Quote was posted by:<b>{{quote.author}}</b> ,
+                      This Quote was posted by:<b>{{quote.author}}</b> ,
         
                         on <em>{{quote.date | date}}</em>. The Total upvotes is <b>{{quote.upvote}}</b> and the Total downvotes is <b>{{quote.downvote}}</b>.
 
                         <button type="button" id="btn" class="btn btn-danger" (click)="deleteQuote($event, i)">Delete</button>
                     </p>
                   
-
-
-                  <div class="myButtons">
+                 <div class="myButtons">
                     <p><button type="button" class="btn btn-primary bg-white" (click)="quote.increaseVotes()"><i class="fa-solid fa-thumbs-up">{{quote.upvote}}</i></button></p>
                     
                     <p><button type="button" class="btn btn-danger bg-white" (click)="quote.decreaseVotes()"><i class="fa-solid fa-thumbs-down">{{quote.downvote}}</i></button></p>
                  
                   </div>
 
-            
-            
-        </div>
+          </div>
     </div>
   </div>
 
