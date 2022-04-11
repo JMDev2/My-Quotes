@@ -10,18 +10,19 @@
         
                     <button type="button" id="btn" class="btn btn-primary"  (click)='toggleDetails(i)'>Toggle Details</button>
                     <p *ngIf='quote.showDescription'>
+
+                     
+
+                      bu
                         This Quote was posted by:<b>{{quote.author}}</b> ,
         
                         on <em>{{quote.date | date}}</em>. The Total upvotes is <b>{{quote.upvote}}</b> and the Total downvotes is <b>{{quote.downvote}}</b>.
+
+                        <button type="button" id="btn" class="btn btn-primary" (click)="deleteQuote($event, i)">Delete</button>
                     </p>
-                   
-                    <!-- <p>{{quote.description}}</p>
-<p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
-<button (click)= 'goalDelete(true)'>Delete Goal</button>
+                  
 
-*ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'deleteGoal($event,i)'> -->
 
-                    
                   <div class="myButtons">
                     <p><button type="button" class="btn btn-primary bg-white" (click)="quote.increaseVotes()"><i class="fa-solid fa-thumbs-up">{{quote.upvote}}</i></button></p>
                     

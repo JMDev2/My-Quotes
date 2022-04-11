@@ -30,7 +30,7 @@ export class QuotesComponent implements OnInit {
 
   
   }
-  deleteGoal(isComplete, index){
+  deleteQuote(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
@@ -39,15 +39,6 @@ export class QuotesComponent implements OnInit {
 }
     }
   }
-  // arr: number[] = this.quotes.map(quote=>quote.upvote)
-  // highest = Math.max(...this.arr)
-    
-  // upVotes(i){
-  //   this.quotes[i].upvote++ 
-  // }
-  // downVotes(j){
-  //   this.quotes[j].upvote--
-  // }
-
+ 
 
 }

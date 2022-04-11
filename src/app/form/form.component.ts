@@ -15,24 +15,13 @@ export class FormComponent implements OnInit {
   newQuote = new Quotes("", 0, 0,"", "",new Date());
   @Output() addQuote = new EventEmitter<Quotes>();
 
-  // submitQuote(newQuote, form){
-
-
-  //   if(newQuote.name == "" ||  newQuote.quote == ""){
-     
-  //     return;
-  //   } else {
-  //   this.addQuote.emit(this.newQuote);
-  //   console.log(newQuote.name)
-  //   }
-  //   }
-
 
     submitQuote(form){
       console.log(form.value)
       form.value.upvote = 0
       form.value.downvote = 0
       this.addQuote.emit(form.value)
+      
       
     }
     constructor() { }

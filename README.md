@@ -37,7 +37,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Live Site
 View [Live] 
-View [Design] https://www.figma.com/file/sMJurYUyQ0Om9DA2wVa0ns/MyForm-Design?node-id=0%3A1
 
 ### Licence
 This project is under the  [MIT](license) license
